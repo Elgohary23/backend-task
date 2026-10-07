@@ -1,6 +1,5 @@
-// file:modules/user/api/userRoutes.ts
 import { Router } from 'express';
-import { InMemoryUserRepository } from '../infrastructure/InMemoryUserRepository';
+import { MongoUserRepository } from '../infrastructure/MongoUserRepository'; // <-- استخدم الـ Mongo Repo
 import { ChangeEmailUseCase } from '../application/ChangeEmailUseCase';
 import { CreateUserUseCase } from '../application/CreateUserUseCase';
 import { GetUserUseCase } from '../application/GetUserUseCase';
@@ -8,7 +7,8 @@ import { ListUsersUseCase } from '../application/ListUsersUseCase';
 import { UserController } from './userController';
 
 const router = Router();
-const userRepository = new InMemoryUserRepository();
+
+const userRepository = new MongoUserRepository(); // <-- هنا التعديل
 
 const changeEmailUseCase = new ChangeEmailUseCase(userRepository);
 const createUserUseCase = new CreateUserUseCase(userRepository);
