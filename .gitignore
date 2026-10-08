@@ -5,7 +5,9 @@ information.txt
 SITUATION.txt
 my-server-key.pem
 *.pem
+enter-server-command.txt
 npm-debug.log*
 coverage/
+*.postman_test_run.json
 .git/
 .vscode/
