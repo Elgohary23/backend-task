@@ -129,3 +129,5 @@ docker-compose.yml              # mongo + kafka + app
 Dockerfile                      # multi-stage build → node dist/index.js
 .env.example                    # required env vars
 ```
+
+Live demo: http://13.53.201.122:3000
