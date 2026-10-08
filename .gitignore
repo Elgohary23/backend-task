@@ -8,6 +8,5 @@ my-server-key.pem
 enter-server-command.txt
 npm-debug.log*
 coverage/
-*.postman_test_run.json
 .git/
 .vscode/
